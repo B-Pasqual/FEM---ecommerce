@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --Pale_orange: hsl(25, 100%, 94%);
+  --very_dark_blue: hsl(220, 13%, 13%);
+  --dark_grayish_blue: hsl(219, 9%, 45%);
+  --grayish_blue: hsl(220, 14%, 75%);
+  --light_grayish_blue: hsl(223, 64%, 98%);
+  --Black: hsl(0, 0%, 0%);
+}
+
+.container {
+  width: 375px;
+}
+
+.padding_mobile {
+  padding: 0 1rem;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+/* !  Header ------------------------ */
+header {
+  display: flex;
+  height: 50px;
+  column-gap: 50px;
+}
+
+.bar {
+  width: 20px;
+  height: 2px;
+  background-color: var(--dark_grayish_blue);
+  border: 0.5px solid var(--dark_grayish_blue);
+}
+
+.bar + .bar {
+  margin-top: 3px;
+}
+
+.left_side,
+.right_side {
+  display: flex;
+}
+
+.left_side {
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  height: 15px;
+  margin-left: 1rem;
+}
+
+/* Right side ---- */
+.right_side {
+  display: flex;
+  align-items: center;
+}
+
+#cart_icon {
+  height: 20px;
+  margin-right: 1rem;
+}
+
+.client_photo {
+  width: 30px;
+}
+
+/* ! Images__container ------------------------------------- */
+.imagem_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.big_image {
+  background-image: url('./images/image-product-1.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 300px;
+  max-width: 300px;
+  border: 2px solid red;
+}
+
+.right_arrow {
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  background-color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+}
+
+.left_arrow {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  background-color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+}

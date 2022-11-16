@@ -4,10 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <title>Ecommerce product page</title>
   </head>
   <body>
+    <div class="container">
+      <header class="padding_mobile">
+        <div class="left_side">
+          <div class="hamburger_menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <img id="logo" src="./images/logo.svg" alt="Logo of the company" />
+        </div>
+        <div class="right_side">
+          <img src="./images/icon-cart.svg" alt="cart icon" id="cart_icon" />
+          <img
+            src="./images/image-avatar.png"
+            alt="Photo of a guy"
+            class="client_photo"
+          />
+        </div>
+      </header>
+      <div class="images_container">
+        <section class="big_image">
+          <img
+            src="./images/icon-next.svg"
+            alt="right arrow"
+            class="right_arrow"
+          />
+          <img
+            src="./images/icon-previous.svg"
+            alt="left arrow"
+            class="left_arrow"
+          />
+        </section>
+      </div>
+    </div>
+
     <!-- Script -->
     <script src="script.js"></script>
   </body>
