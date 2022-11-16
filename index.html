@@ -30,6 +30,26 @@
             alt="Photo of a guy"
             class="client_photo"
           />
+          <div class="number_in_cart">0</div>
+        </div>
+        <!-- Cart modal ------ -->
+        <div class="cart_modal hidden">
+          <p class="title">Cart</p>
+          <div class="product_card">
+            <div class="first_row">
+              <img
+                class="product_img-cart"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="imagem of a sneaker"
+              />
+              <div class="cart_details">
+                <p class="product_name">Autumn Limited Edition</p>
+                <p>$125.00 x 3 $375.00</p>
+              </div>
+              <img id="lixo" src="./images/icon-delete.svg" alt="trash icon" />
+            </div>
+            <button class="checkout_button">Checkout</button>
+          </div>
         </div>
       </header>
       <div class="images_container">
@@ -74,7 +94,7 @@
           <p class="number_items">0</p>
           <img class="plus_icon" src="./images/icon-plus.svg" alt="plus_icon" />
         </div>
-        <button class="add_cart">
+        <button id="add_cart">
           <img src="./images/icon-cart.svg" alt="cart icon" />
           Add to cart
         </button>
