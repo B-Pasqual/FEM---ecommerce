@@ -292,15 +292,31 @@ button img {
 
 /* ! Imagem selector ---------------------------------------------- */
 
+.images_selector-container {
+  display: none;
+  max-width: 375px;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
 .card {
-  width: 60px;
-  height: 60px;
-  background-color: bisque;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+  border-radius: 5px;
+}
+
+.card.active {
+  opacity: 0.3;
 }
 
 /* todo Media querie ------------------------------------------------- */
 
 @media (min-width: 800px) {
+  .images_selector-container {
+    display: flex;
+  }
+
   .container {
     max-width: 1200px;
   }

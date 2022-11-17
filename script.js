@@ -35,6 +35,8 @@ const cartNumber = document.querySelector('.number_in_cart');
 let limpaCarrinho = document.querySelectorAll('.lixo');
 //Imagem do produto
 let ImagemProduto = document.querySelector('.product_img-cart');
+//Cards trocadores de imagens
+let cards = document.querySelectorAll('.card');
 
 //! Funções -----------------------------------------------------------
 
@@ -43,6 +45,8 @@ function checaNumero(operador) {
   operador == 'positivo' ? valor++ : valor--;
   numeroProdutos.innerHTML = valor;
 }
+
+//Função que pega o valor de entrada e cálcula o valor total, também executa a função de atualizar o valor no carrinho e a de alterar o elemento .cardDetails com os valores.
 
 function calculaValor() {
   let valor = Number(numeroProdutos.innerHTML);
@@ -56,8 +60,21 @@ function alteraElemento(valor, total) {
   <p>$125.00 x ${valor}  <strong>$${total.toFixed(2)}</strong></p>`;
 }
 
+//Função para atualizar o número de itens no carrinho
 function atualizaQtd(quantidade) {
   cartNumber.innerHTML = quantidade;
+}
+
+//Função para remover a classe .active nos cardsImages (os cards que alteram o container maior)
+function removeActive() {
+  cards.forEach((card) => {
+    card.classList.remove('active');
+  });
+}
+
+//Função que irá trocar a imagem da div maior, com base na imagem menor selecionada
+function trocaImagem(index) {
+  imageContainer.style.backgroundImage = `url(${images[index]})`;
 }
 
 //! Event Handlers -----------------------------------------------------
@@ -105,5 +122,14 @@ limpaCarrinho.forEach((lixo) => {
     cartDetails.innerHTML = 'Carrinho vazio :(';
     ImagemProduto.classList.add('hidden');
     numeroProdutos.innerHTML = 0;
+  });
+});
+
+cards.forEach((card, index) => {
+  cards[index].style.backgroundImage = `url(${images[index]})`;
+  card.addEventListener('click', () => {
+    removeActive();
+    card.classList.toggle('active');
+    trocaImagem(index);
   });
 });
