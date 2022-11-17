@@ -20,6 +20,9 @@
 
 .container {
   width: 375px;
+  margin-bottom: 3rem;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .padding_mobile {
@@ -31,14 +34,15 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  background-color: var(--azulacinzentado);
+  padding: 1rem 0;
 }
 
 .hidden {
   display: none;
 }
 
-/* !  Header ------------------------ */
+/* !  Header -------------------------------------------------------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -155,6 +159,7 @@ header {
   position: relative;
   width: 100%;
   height: 375px;
+  border-radius: 10px;
 }
 
 .right_arrow {
@@ -252,6 +257,14 @@ main p {
   margin: 2rem 0;
   background-color: var(--azulacinzentado);
   padding: 1rem;
+}
+
+.number_products img {
+  width: 20px;
+}
+
+.numer_products img:hover {
+  cursor: pointer;
 }
 
 .number_products p {

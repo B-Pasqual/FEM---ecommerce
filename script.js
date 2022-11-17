@@ -1,4 +1,4 @@
-//! Variáveis e constantes -------------------------------------------
+//! Variáveis e constantes ------------------------------------------
 
 const images = [
   './images/image-product-1.jpg',
@@ -8,7 +8,8 @@ const images = [
 ];
 let indice = 0;
 
-//! DOM Selectors ---------------------------------------------------
+//! DOM Selectors -----------------------------------------------------
+
 const setaDireita = document.querySelector('.right_arrow');
 const setaEsquerda = document.querySelector('.left_arrow');
 const imageContainer = document.querySelector('.big_image');
@@ -31,9 +32,11 @@ const addCart = document.getElementById('add_cart');
 //Number in the cart
 const cartNumber = document.querySelector('.number_in_cart');
 //Lixeira (limpa cart)
-const limpaCarrinho = document.getElementById('lixo');
+let limpaCarrinho = document.querySelectorAll('.lixo');
+//Imagem do produto
+let ImagemProduto = document.querySelector('.product_img-cart');
 
-//! Funções ---------------------------------------------------------
+//! Funções -----------------------------------------------------------
 
 function checaNumero(operador) {
   let valor = Number(numeroProdutos.innerHTML);
@@ -44,16 +47,20 @@ function checaNumero(operador) {
 function calculaValor() {
   let valor = Number(numeroProdutos.innerHTML);
   let total = 125.0 * valor;
-  cartDetails.innerHTML = `<p class="product_name">Autumn Limited Edition</p>
-  <p>$125.00 x ${valor}    <strong>$${total.toFixed(2)}</p></strong>`;
   atualizaQtd(valor);
+  alteraElemento(valor, total);
+}
+
+function alteraElemento(valor, total) {
+  cartDetails.innerHTML = ` <p class="product_name">Autumn Limited Edition</p>
+  <p>$125.00 x ${valor}  <strong>$${total.toFixed(2)}</strong></p>`;
 }
 
 function atualizaQtd(quantidade) {
   cartNumber.innerHTML = quantidade;
 }
 
-//! Event Handlers ---------------------------------------------------
+//! Event Handlers -----------------------------------------------------
 
 setaDireita.addEventListener('click', () => {
   indice == 3 ? (indice = 0) : (indice += 1);
@@ -81,15 +88,22 @@ plusBtn.addEventListener('click', () => {
 //! ---- Cart icon
 cartIcon.addEventListener('click', () => {
   cartModal.classList.toggle('hidden');
-  cartModal.classList.toggle('animate');
 });
 
 //! ---- Add cart
 addCart.addEventListener('click', () => {
   calculaValor();
+  console.log(limpaCarrinho);
+  ImagemProduto.classList.remove('hidden');
 });
 
 //! ---- Clean cart (lixeira)
-limpaCarrinho.addEventListener('click', () => {
-  cardProduto.innerHTML = 'Carrinho vazio :(';
+limpaCarrinho.forEach((lixo) => {
+  lixo.addEventListener('click', () => {
+    atualizaQtd(0);
+    console.log('estou sendo clicado');
+    cartDetails.innerHTML = 'Carrinho vazio :(';
+    ImagemProduto.classList.add('hidden');
+    numeroProdutos.innerHTML = 0;
+  });
 });
