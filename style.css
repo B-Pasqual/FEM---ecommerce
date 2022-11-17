@@ -19,7 +19,7 @@
 }
 
 .container {
-  width: 375px;
+  max-width: 375px;
   margin-bottom: 3rem;
   background-color: white;
   border-radius: 10px;
@@ -288,4 +288,34 @@ button {
 
 button img {
   margin-right: 1rem;
+}
+
+/* ! Imagem selector ---------------------------------------------- */
+
+.card {
+  width: 60px;
+  height: 60px;
+  background-color: bisque;
+}
+
+/* todo Media querie ------------------------------------------------- */
+
+@media (min-width: 800px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .main_wrapper {
+    display: flex;
+    column-gap: 100px;
+  }
+
+  .details_wrapper {
+    border: 1px solid lightblue;
+    max-width: 400px;
+  }
+
+  .big_image {
+    width: 375px;
+  }
 }
