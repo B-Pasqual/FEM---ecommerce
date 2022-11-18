@@ -13,6 +13,7 @@ let indice = 0;
 const setaDireita = document.querySelector('.right_arrow');
 const setaEsquerda = document.querySelector('.left_arrow');
 const imageContainer = document.querySelector('.big_image');
+const containerPrincipal = document.querySelector('.container');
 //minus and plus buttons
 const minusBtn = document.querySelector('.minus_icon');
 const plusBtn = document.querySelector('.plus_icon');
@@ -37,6 +38,10 @@ let limpaCarrinho = document.querySelectorAll('.lixo');
 let ImagemProduto = document.querySelector('.product_img-cart');
 //Cards trocadores de imagens
 let cards = document.querySelectorAll('.card');
+//modalProduct
+let modalProduct = document.querySelector('.modal_product');
+// close button
+let closeBtn = document.querySelector('.close_button');
 
 //! Funções -----------------------------------------------------------
 
@@ -132,4 +137,37 @@ cards.forEach((card, index) => {
     card.classList.toggle('active');
     trocaImagem(index);
   });
+});
+
+imageContainer.addEventListener('click', () => {
+  console.log('fui clicado');
+  let newElement = document.createElement('div');
+  newElement.setAttribute('class', 'modal_product');
+  newElement.innerHTML = `
+<div class="images_container">
+  <div class='close_button'>X</div>
+  <section class="big_image">
+    <img
+      src="./images/icon-next.svg"
+      alt="right arrow"
+      class="right_arrow"
+    />
+    <img
+      src="./images/icon-previous.svg"
+      alt="left arrow"
+      class="left_arrow"
+    />
+  </section>
+  <div class="images_selector-container">
+    <div class="card card1"></div>
+    <div class="card card2"></div>
+    <div class="card card3"></div>
+    <div class="card card4"></div>
+  </div>
+</div>`;
+  containerPrincipal.appendChild(newElement);
+});
+
+closeBtn.addEventListener('click', () => {
+  ``;
 });
