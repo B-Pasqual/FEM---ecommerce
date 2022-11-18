@@ -40,7 +40,9 @@ let ImagemProduto = document.querySelector('.product_img-cart');
 let cards = document.querySelectorAll('.card');
 //todo Seleções para o modal ------
 const cardsx = document.querySelectorAll('.cardx');
-const containerImgGrande = document.querySelector('.imagem_maior');
+const containerImgGrande = document.querySelector('.imagem_grande');
+const botaoFechaModal = document.querySelector('.close_button');
+const modalProduto = document.querySelector('.container_modal');
 //! Funções -----------------------------------------------------------
 
 function checaNumero(operador) {
@@ -147,6 +149,7 @@ cards.forEach((card, index) => {
   });
 });
 
+//! ------ Product modal
 cardsx.forEach((cardx, index) => {
   cardsx[index].style.backgroundImage = `url(${images[index]})`;
   cardx.addEventListener('click', () => {
@@ -154,4 +157,12 @@ cardsx.forEach((cardx, index) => {
     cardx.classList.toggle('active');
     trocaImagem2(index);
   });
+});
+
+botaoFechaModal.addEventListener('click', () => {
+  modalProduto.style.display = 'none';
+});
+
+imageContainer.addEventListener('click', () => {
+  modalProduto.style.display = 'flex';
 });
