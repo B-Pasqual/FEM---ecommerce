@@ -38,7 +38,9 @@ let limpaCarrinho = document.querySelectorAll('.lixo');
 let ImagemProduto = document.querySelector('.product_img-cart');
 //Cards trocadores de imagens
 let cards = document.querySelectorAll('.card');
-
+//todo Seleções para o modal ------
+const cardsx = document.querySelectorAll('.cardx');
+const containerImgGrande = document.querySelector('.imagem_maior');
 //! Funções -----------------------------------------------------------
 
 function checaNumero(operador) {
@@ -73,9 +75,19 @@ function removeActive() {
   });
 }
 
+function removeActive2() {
+  cardsx.forEach((cardx) => {
+    cardx.classList.remove('active');
+  });
+}
+
 //Função que irá trocar a imagem da div maior, com base na imagem menor selecionada
 function trocaImagem(index) {
   imageContainer.style.backgroundImage = `url(${images[index]})`;
+}
+
+function trocaImagem2(index) {
+  containerImgGrande.style.backgroundImage = `url(${images[index]})`;
 }
 
 //! Event Handlers -----------------------------------------------------
@@ -132,5 +144,14 @@ cards.forEach((card, index) => {
     removeActive();
     card.classList.toggle('active');
     trocaImagem(index);
+  });
+});
+
+cardsx.forEach((cardx, index) => {
+  cardsx[index].style.backgroundImage = `url(${images[index]})`;
+  cardx.addEventListener('click', () => {
+    removeActive2();
+    cardx.classList.toggle('active');
+    trocaImagem2(index);
   });
 });
