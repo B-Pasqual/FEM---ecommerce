@@ -47,7 +47,13 @@ const modalProduto = document.querySelector('.container_modal');
 
 function checaNumero(operador) {
   let valor = Number(numeroProdutos.innerHTML);
-  operador == 'positivo' ? valor++ : valor--;
+  if (operador == 'positivo') {
+    valor++;
+  } else {
+    if (valor != 0) valor--;
+  }
+
+  // operador == 'positivo' ? valor++ : valor--;
   numeroProdutos.innerHTML = valor;
 }
 

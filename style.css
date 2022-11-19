@@ -260,11 +260,19 @@ main p {
 }
 
 .number_products img {
-  width: 10px;
+  width: 15px;
+  transition: all 0.5s;
 }
 
-.numer_products img:hover {
+.minus_icon:hover,
+.plus_icon:hover {
+  transform: scale(1.3);
   cursor: pointer;
+}
+
+.minus_icon:active,
+.plus_icon:active {
+  transform: scale(1);
 }
 
 .number_products p {
@@ -282,8 +290,19 @@ button {
   color: var(--laranja2);
   font-size: 1.1rem;
   font-weight: 700;
-  border-bottom: 3px solid orange;
-  box-shadow: 5px 30px 30px 5px var(--laranja2);
+  box-shadow: 5px 10px 10px 3px var(--laranja2);
+  transition: all 0.5s;
+}
+
+#add_cart:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 5px 15px 15px 3px;
+}
+
+#add_cart:active {
+  transform: scale(1);
+  box-shadow: 1px 2px 2px 1px;
 }
 
 button img {
