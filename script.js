@@ -172,3 +172,7 @@ botaoFechaModal.addEventListener('click', () => {
 imageContainer.addEventListener('click', () => {
   modalProduto.style.display = 'flex';
 });
+
+document.addEventListener('keypress', function (evento) {
+  console.log(evento.key);
+});
