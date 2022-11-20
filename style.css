@@ -431,6 +431,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.749);
   z-index: 2;
   transition: all 0.1s;
+  display: none;
 }
 
 .menu_modal {
@@ -441,10 +442,11 @@ ul {
   top: 0px;
   left: 0px;
   z-index: 8;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   transition: all 1s;
+  display: none;
 }
 
 .lista_modal {
