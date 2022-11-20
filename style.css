@@ -429,7 +429,7 @@ ul {
 }
 
 .hamburguer_menu_hover {
-  height: 110vh;
+  height: 140vh;
   width: 130vw;
   top: 0;
   left: -20px;
@@ -443,7 +443,7 @@ ul {
 .menu_modal {
   width: 50%;
   max-width: 200px;
-  height: 110vh;
+  height: 140vh;
   background-color: rgb(255, 255, 255);
   position: absolute;
   top: 0px;
