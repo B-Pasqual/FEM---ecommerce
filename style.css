@@ -436,7 +436,7 @@ ul {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.749);
   z-index: 2;
-  transition: all 0.1s;
+  transition: all 1s;
   display: none;
 }
 
@@ -454,12 +454,12 @@ ul {
   align-items: center;
   transition: all 1s;
   display: none;
-  transform: translateX(250px);
+  /* transform: translateX(250px); */
 }
 
-.menu_modal.active {
+/* .menu_modal.active {
   transform: translateX(0);
-}
+} */
 
 .lista_modal {
   margin-top: 5rem;
