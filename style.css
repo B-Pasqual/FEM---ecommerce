@@ -22,7 +22,6 @@
   max-width: 375px;
   background-color: white;
   border-radius: 10px;
-  margin: 2rem 0;
 }
 
 .padding_mobile {
@@ -36,7 +35,6 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white;
-  padding: 1rem 0;
 }
 
 .hidden {
@@ -457,7 +455,7 @@ ul {
 }
 
 li {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .close_modal_button {
@@ -494,6 +492,7 @@ li {
 
   li {
     color: var(--azulmuitoacinzentado);
+    /* font-size: 1rem; */
   }
 
   li:hover {
