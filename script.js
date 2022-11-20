@@ -43,6 +43,11 @@ const cardsx = document.querySelectorAll('.cardx');
 const containerImgGrande = document.querySelector('.imagem_grande');
 const botaoFechaModal = document.querySelector('.close_button');
 const modalProduto = document.querySelector('.container_modal');
+//todo close modal -------
+const closeModal = document.querySelector('.close_modal_button');
+const modalMenu = document.querySelector('.hamburguer_menu_hover');
+const menuModal = document.querySelector('.menu_modal');
+const hamburguerMenu = document.querySelector('.hamburger_menu');
 //! Funções -----------------------------------------------------------
 
 function checaNumero(operador) {
@@ -175,4 +180,14 @@ imageContainer.addEventListener('click', () => {
 
 document.addEventListener('keypress', function (evento) {
   console.log(evento.key);
+});
+
+closeModal.addEventListener('click', () => {
+  modalMenu.style.display = 'none';
+  menuModal.style.display = 'none';
+});
+
+hamburguerMenu.addEventListener('click', () => {
+  menuModal.style.display = 'flex';
+  modalMenu.style.display = 'block';
 });

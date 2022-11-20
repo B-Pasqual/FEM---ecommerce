@@ -420,9 +420,61 @@ ul {
   display: none;
 }
 
+.hamburger_menu {
+  position: relative;
+}
+
+.hamburguer_menu_hover {
+  height: 160vh;
+  width: 100vw;
+  top: -15px;
+  left: -20px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.749);
+  z-index: 2;
+  transition: all 0.1s;
+}
+
+.menu_modal {
+  width: 50%;
+  height: 160vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s;
+}
+
+.lista_modal {
+  margin-top: 5rem;
+  display: block;
+  list-style: none;
+  padding-left: 2rem;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+.close_modal_button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  left: 35px;
+  top: 40px;
+}
+
 /* todo Media querie ------------------------------------------------- */
 
 @media (min-width: 1000px) {
+  .hamburguer_menu_hover {
+    display: none;
+  }
+
   .number_in_cart {
     bottom: 55px;
   }
