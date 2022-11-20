@@ -131,6 +131,7 @@ plusBtn.addEventListener('click', () => {
 //! ---- Cart icon
 cartIcon.addEventListener('click', () => {
   cartModal.classList.toggle('hidden');
+  cartModal.classList.toggle('active');
 });
 
 //! ---- Add cart
@@ -178,9 +179,9 @@ imageContainer.addEventListener('click', () => {
   modalProduto.style.display = 'flex';
 });
 
-document.addEventListener('keypress', function (evento) {
-  console.log(evento.key);
-});
+// document.addEventListener('keypress', function (evento) {
+//   console.log(evento.key);
+// });
 
 closeModal.addEventListener('click', () => {
   modalMenu.style.display = 'none';

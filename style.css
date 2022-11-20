@@ -22,6 +22,7 @@
   max-width: 375px;
   background-color: white;
   border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
 .padding_mobile {
@@ -422,6 +423,11 @@ ul {
   position: relative;
 }
 
+.hamburger_menu:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .hamburguer_menu_hover {
   height: 160vh;
   width: 130vw;
@@ -436,6 +442,7 @@ ul {
 
 .menu_modal {
   width: 50%;
+  max-width: 200px;
   height: 160vh;
   background-color: rgb(255, 255, 255);
   position: absolute;
@@ -447,6 +454,11 @@ ul {
   align-items: center;
   transition: all 1s;
   display: none;
+  transform: translateX(250px);
+}
+
+.menu_modal.active {
+  transform: translateX(0);
 }
 
 .lista_modal {
@@ -471,6 +483,10 @@ li {
 /* todo Media querie ------------------------------------------------- */
 
 @media (min-width: 1000px) {
+  .menu_modal {
+    display: none;
+  }
+
   .hamburguer_menu_hover {
     display: none;
   }
